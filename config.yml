@@ -37,7 +37,7 @@ proxies:
   - {"name":"google-hk-vess","type":"vmess","server":"34.92.195.87","port":20191,"uuid":"bab76dba-f987-443c-8191-69c7895e6b00","alterId":233,"cipher":"auto"}
 
   # VMess(Websocket + TLS)
-  - name: "hk-vess-websocket-ssl"
+  - name: "hk"
     type: vmess
     server: www.nicelist.xyz
     port: 443
@@ -51,6 +51,23 @@ proxies:
     ws-path: /myblog/ 
     # ws-headers:
     #   Host: v2ray.com
+    
+     # VMess(Websocket + TLS)
+  - name: "us-center1"
+    type: vmess
+    server: us-central1-a.nicelist.xyz
+    port: 443
+    uuid: 8dd87fce-b639-477b-804c-a0f22e6dc3c7
+    alterId: 233
+    cipher: auto
+    # udp: true
+    tls: true
+    # skip-cert-verify: true
+    network: ws
+    ws-path: /233blog/ 
+    # ws-headers:
+    #   Host: v2ray.com
+
 
 proxy-groups:
 -
@@ -58,8 +75,9 @@ proxy-groups:
   type: select
   proxies:
     - "google-hk-vess"
-    - "hk-vess-websocket-ssl"
--
+    - "hk"
+    - "us-center1"
+    
   name: Domestic
   type: select
   proxies:
