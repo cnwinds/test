@@ -67,7 +67,20 @@ proxies:
     ws-path: /233blog/ 
     # ws-headers:
     #   Host: v2ray.com
-
+  - name: "singa"
+    type: vmess
+    server: singa.nicelist.xyz
+    port: 443
+    uuid: 6c68e7e3-d6cd-4a93-9c3d-d5decf98955b
+    alterId: 233
+    cipher: auto
+    # udp: true
+    tls: true
+    # skip-cert-verify: true
+    network: ws
+    ws-path: /233blog/ 
+    # ws-headers:
+    #   Host: v2ray.com
 
 proxy-groups:
   - name: Proxy
@@ -76,6 +89,7 @@ proxy-groups:
       - "google-hk-vess"
       - "hk"
       - "us-center1"
+      - "singa"
   - name: Domestic
     type: select
     proxies:
