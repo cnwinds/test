@@ -34,8 +34,6 @@ secret: ''
 
 
 proxies:
-  - {"name":"google-hk-vess","type":"vmess","server":"34.92.195.87","port":20191,"uuid":"bab76dba-f987-443c-8191-69c7895e6b00","alterId":233,"cipher":"auto"}
-
   # VMess(Websocket + TLS)
   - name: "hk"
     type: vmess
@@ -52,7 +50,7 @@ proxies:
     # ws-headers:
     #   Host: v2ray.com
     
-     # VMess(Websocket + TLS)
+  # VMess(Websocket + TLS)
   - name: "us-center1"
     type: vmess
     server: us-central1-a.nicelist.xyz
@@ -72,7 +70,6 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - "google-hk-vess"
       - "hk"
       - "us-center1"
 
