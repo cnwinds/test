@@ -34,21 +34,7 @@ secret: ''
 
 
 proxies:
-  # VMess(Websocket + TLS)
-  - name: "hk"
-    type: vmess
-    server: www.nicelist.xyz
-    port: 443
-    uuid: 9ea2a218-0e7c-4a0a-b0ba-af845ed3d5d0
-    alterId: 233
-    cipher: auto
-    # udp: true
-    tls: true
-    # skip-cert-verify: true
-    network: ws
-    ws-path: /myblog/ 
-    # ws-headers:
-    #   Host: v2ray.com
+
     
   # VMess(Websocket + TLS)
   - name: "us-center1"
@@ -84,7 +70,6 @@ proxy-groups:
   - name: Proxy
     type: select
     proxies:
-      - "hk"
       - "us-center1"
       - "tw"
 
