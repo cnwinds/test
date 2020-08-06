@@ -66,12 +66,27 @@ proxies:
     # ws-headers:
     #   Host: v2ray.com
 
+  # VMess(Websocket + TLS)
+  - name: "tw"
+    type: vmess
+    server: tw.nicelist.xyz
+    port: 443
+    uuid: b3655e5e-ab5a-4964-b089-9987081ee87d
+    alterId: 233
+    cipher: auto
+    # udp: true
+    tls: true
+    # skip-cert-verify: true
+    network: ws
+    ws-path: / 
+
 proxy-groups:
   - name: Proxy
     type: select
     proxies:
       - "hk"
       - "us-center1"
+      - "tw"
 
   - name: Domestic
     type: select
