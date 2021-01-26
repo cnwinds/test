@@ -66,6 +66,20 @@ proxies:
     network: ws
     ws-path: / 
 
+  # VMess(Websocket + TLS)
+  - name: "singa"
+    type: vmess
+    server: s.nicelist.xyz
+    port: 443
+    uuid: efcdc9ef-310f-4b73-bad9-e6344c67f8d0
+    alterId: 0
+    cipher: auto
+    # udp: true
+    tls: true
+    # skip-cert-verify: true
+    network: ws
+    ws-path: /wow
+    
 proxy-groups:
   - name: Proxy
     type: select
